@@ -1,0 +1,55 @@
+// variables
+
+
+// colours
+$header-bg: white;
+$dark-bg: #333645;
+$shadow: #f0f0f0;
+$brdr: #c0c0c0;
+$header-gray-btn: #84858f; 
+$light-text: white;
+$dark-text: #000;
+$dvdr: lightgray;
+$srch: #e6e6e6;
+$srch-txt: #9c9c9c;
+$search-inner-shadow: darkgrey;
+$search-outer-shadow: #14a2c4;
+$dots: #d6d6d6;
+
+$software:#67809f;
+$it:#4183d7; 
+$marketing: #2ecc71;
+$telecoms:#d64541;
+$design:#926fb1;
+$security:#f62459;
+$training:#926fb1;
+
+$fb: #4267B2;
+$twt: #1DA1F2;
+$linkedin: #2867B2;
+
+//widths 
+$xs: 499px;
+$sm: 500px;
+$med: 768px;
+$lg: 992px;
+$xl: 1260px;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* -----------------------------------------
+----------------------Mixins-----------------
+-------------------------------------------- */
+
+@mixin hover-nav-bg {
+    svg {fill: $light-text;}
+}
+
+// Loops ---------------------------------------------------
+
+// @for $i from 2 through 6 { 
+//      .hide-nav-#{$i} {
+//         bottom: ( ($i * 40px) - 40px ) ;
+//      }
+//     }

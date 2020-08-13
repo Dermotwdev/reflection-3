@@ -1,0 +1,210 @@
+/* ------- Typography ------ */
+
+body, header {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 0.4px;
+}
+h1, h2, h4, h5, .btn, .hide-nav {
+    text-transform: uppercase;
+}
+h1 {
+    font-size: 3em;
+}
+h2 {
+    font-size: 2.3em;
+}
+h3 {
+    font-size: 1.3em;
+}
+h5 {
+    font-size: 0.7em;
+}
+p {
+    line-height: 1.5;
+}
+strong {
+    font-weight: 600;
+}
+a, a:visited {
+    text-decoration: none;
+    color: currentcolor;
+}
+.ham {
+    color: $light-text;
+}
+input {
+    color: $srch-txt;
+}
+.search {
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+}
+
+.search-inline {
+    font-family: 'poppins', sans-serif;
+    font-size: 0.9em;
+}
+.btn {
+    color: $light-text;
+}
+.header-btn-text {
+    font-size: 1.04em;
+    letter-spacing: 0.4px;
+    text-align: center;
+    color: $light-text;
+}
+.nav-container {
+    color: $light-text;     
+}
+nav {
+    letter-spacing: 0;
+}
+
+a.main-nav {
+    line-height: 1;
+    h5 { 
+        font-size: 0.65em;
+    }
+    h4 { 
+        font-size: 1.15em;
+    }
+}
+
+.hide-nav ul {
+    line-height: 1em;
+}
+.hide-nav {
+    color: $light-text; 
+}
+.sub-nav-content {
+    font-size: 0.8em;
+}
+
+.banner-img {
+    color: $light-text;
+}
+
+.banner-p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    text-align: center;
+}
+.banner-btn {
+    font-size: 1.25em;
+    &-text {
+        text-align: center; 
+    }
+}
+.card {
+    text-align: center;
+    p {
+        font-size: 0.8125em;
+    }
+    h3 {
+        font-size: 1.2em;
+    }
+    .btn {
+        color: $light-text;
+    }
+    &:hover {
+        color: $light-text;
+    }
+}
+
+.background-info {
+    color: $light-text;
+    .btn {
+        color: $dark-bg;
+    }
+    p {
+        line-height: 1.8;
+    }
+}
+.culture-btn {
+    font-size: 0.9em;
+    font-size: 1.1em;
+}
+.news-btn {
+    color: $light-text;
+}
+.news-summary {
+    p {
+        font-size: 0.85em;
+    }
+    h4 {
+        text-transform: none;
+        font-weight: 600;
+    }
+}
+.news-summary-1 h4 a {
+    color: $training;
+}
+.news-summary-2 h4 a, .news-summary-3 h4 a {
+        color: $it;
+    }
+
+.news-summary h4 a:hover {
+    text-decoration: underline;
+}
+
+.news-tag {
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    font-weight: 700;
+}
+.tag-link:hover {
+    text-decoration: underline;
+}
+
+.news-tooltip {
+    font-weight: 400;
+    text-align: center;
+    text-transform: none;
+}
+
+.news-details {
+    line-height: 1.6;
+    font-size: 0.875em;
+}
+
+.news-footer {
+    line-height: 1em;
+    p {
+        font-size: 1em;
+    }
+}
+
+.main-footer {
+    color: $light-text;
+    font-size: 0.825em;
+    h4 {
+        font-size: 1.2em;
+    }
+    a:hover, ul a:hover {
+        text-decoration: underline;
+    }
+    a:active {
+        color: darken($dark-bg, 20%);
+    }
+    a {
+        color: white;
+    }
+}
+
+ul {
+    line-height: 1.6em;
+}
+
+.social div {
+    a:hover {
+        text-decoration: none;
+    }
+}
+ 
+.desc {
+    color: $light-text;
+    text-align: center;
+    font-size: 0.9em;
+}
+

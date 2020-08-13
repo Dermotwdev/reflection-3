@@ -1,0 +1,205 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, p {
+    padding: 15px;
+}
+
+h2 {
+    padding-top: 0;
+}
+
+h3 {
+    .news-header & {
+        padding-top: 35px;
+    }
+}
+ul {
+    padding: 15px; 
+}
+
+.software {
+    &-sub {
+        background-color: darken($software, 10%);
+    }
+    &-nav svg {
+        fill: $software;
+    }
+    &-btn {
+        background-color: $software;
+        &:hover { 
+            background-color: darken($software, 10%);
+        }
+    }
+    .circle, .btn {
+        background: $software;
+    }
+    &:hover {
+        background: $software;
+         .btn {
+        color:$software
+    }
+        .circle svg {
+            fill: $software;
+        }
+    }
+}
+.it {
+    &-sub {
+        background-color: darken($it, 10%);
+    }
+    &-nav svg {
+            fill: $it;
+    }
+    &-btn {
+        background-color: $it;
+        &:hover { 
+            background-color: darken($it, 10%);
+        }
+    }
+    .circle, .btn {
+        background: $it;
+    } 
+    &:hover { 
+        background: $it;
+        .btn{
+            color:$it
+        }
+        .circle svg {
+            fill: $it;
+        }
+    }
+}
+.marketing {
+    &-sub {
+        background-color: darken($marketing, 10%);
+    }
+    &-nav svg {
+        fill: $marketing;
+    }
+    &-btn {
+        background-color: $marketing;
+        &:hover { 
+            background-color: darken($marketing, 10%);
+        }
+    }
+    .circle, .btn {
+        background: $marketing;
+    }
+    &:hover { 
+        background: $marketing;
+        .btn {
+            color:$marketing
+        }
+        .circle svg {
+            fill: $marketing;
+        }
+    } 
+}
+.telecoms {
+    &-sub {
+        background-color: darken($telecoms, 10%);
+    }
+    &-nav svg {
+        fill: $telecoms;
+    }
+    &-btn {
+        background-color: $telecoms;
+        &:hover { 
+            background-color: darken($telecoms, 10%);
+        }
+    }
+    .circle, .btn {
+        background: $telecoms;
+    }
+    &:hover { 
+        background: $telecoms;
+        .btn {
+        color:$telecoms
+        }
+        .circle svg {
+                fill: $telecoms;
+        }
+    }
+}
+.design {
+    &-sub {
+        background-color: darken($design, 10%);
+    }
+    &-nav svg {
+        fill: $design;
+    }
+    &-btn {
+        background-color: $design;
+        &:hover { 
+            background-color: darken($design, 10%);
+        }
+    }
+    .circle, .btn {
+        background: $design;
+    } 
+    &:hover { 
+        .btn{
+        color: $design
+        }
+        background: $design;
+        .circle svg {
+            fill: $design;
+        }
+    }
+}
+.security {
+    &-sub {
+        background-color: darken($security, 10%);
+    }
+    &-nav svg {
+        fill: $security;
+    }
+    &-btn {
+        background-color: $security;
+        &:hover { 
+            background-color: darken($security, 10%);
+        }
+    }
+    .circle, .btn {
+        background: $security;
+    }
+    &:hover { 
+        background: $security;
+        .btn{
+            color:$security
+        }
+        .circle svg {
+            fill: $security;
+        }
+    }
+}
+.training {
+    &-sub {
+        background-color: darken($training, 10%);
+    }
+    &-nav svg {
+        fill: $training;
+    }
+    &-btn {
+        background-color: $training;
+        &:hover { 
+            background-color: darken($training, 10%);
+        }
+    }
+    .circle, .btn {
+        background: $training;
+    }
+    &:hover { 
+        .btn{
+            color:$training
+        }
+        background: $training;
+        .circle svg {
+            fill: $training;
+        }
+    }
+}
+
+

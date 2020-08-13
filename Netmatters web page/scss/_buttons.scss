@@ -1,0 +1,147 @@
+/* -----button styling ----*/ 
+
+.btn {
+    border-radius: 3px;
+    padding: 15px;
+    border: none;
+    display: flex;
+}
+.a-btn {
+    display: flex;
+}
+.support { 
+    background: $it;
+    &:hover { 
+        background: darken($it, 10%)
+    }
+}
+.contact, .search-btn, .search-btn-3 { 
+    background: lighten($header-gray-btn, 10%);
+    &:hover{ 
+        background: $header-gray-btn;
+    }
+}
+.search-btn-3 {
+    border-radius: 3px;
+}
+.mag-button {
+    background-color: transparent;
+    border: none;
+}
+.header-row {
+    .btn {
+        display: flex;
+        height: 56px;
+    }
+}
+.header-btn svg {
+    margin-left: -2px;
+    margin-right: -2px;
+}
+.header-btn-text {
+    margin: auto 0 auto 15px;
+} 
+
+.ham {
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    height: 54px;
+    min-width: 63px;
+    background-color: $dark-bg;
+    border: none;
+    align-items: center;
+    padding: 6px 13px;
+    // div {
+    //     width: 33px;
+    //     height: 2px;
+    //     background-color: $light-text;
+    //     margin: 3px 0;
+    //     border-radius: 0.5px;
+    //     }
+        h5 {
+            padding-top: 4px;
+            margin-top: 25px;
+        }
+    &:hover {
+        background: darken($dark-bg, 10%)
+    }
+}
+
+.banner-btn {
+    box-sizing: border-box;
+    display: flex;
+    height: auto;
+    margin-top: 15px;
+    padding: 4px 20px;
+    &-text {
+        margin: auto 0;
+    }
+}
+
+.arrow-container-lg {
+    display: inline-block;
+    height: 22px;
+    width: 22px;
+    margin: 15px 0 15px 8px;
+}
+
+.arrow-icon {
+    fill: $light-text;
+}
+
+.culture-btn {
+    div svg {
+        fill: $dark-bg;
+    }
+    background: $header-bg;
+    box-sizing: border-box;
+    display: flex;
+    padding: 0 0 0 15px;
+    margin-top: 15px;
+    &-text {
+        margin: auto 0;
+    }
+    &:hover {
+        background-color: darken($header-bg, 10%)
+    }
+}
+
+.arrow-container-md {
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 15px 10px;
+}
+
+.card .btn {
+    margin: auto;
+    border: none;
+    margin-bottom: 30px;
+}
+
+.news-btn {
+    margin: 30px 0;
+}
+.news-btn-it {
+    background-color: $it;
+    &:hover{
+        background-color: darken($it, 10%)
+    }
+}
+
+.news-btn-training {
+    background-color: $training;
+    &:hover{
+        background-color: darken($training, 10%)
+    }
+}
+
+/* IE 'vertical margin: auto' fix*/
+
+.culture-btn, .banner-btn, .header-row, .header-btn {
+    display: flex;
+    align-items: center;
+}

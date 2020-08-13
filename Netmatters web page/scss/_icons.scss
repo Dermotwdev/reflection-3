@@ -1,0 +1,24 @@
+/* ----- icon styling ----- */
+
+.bi {
+    height: 20px;
+    width: 20px; 
+    margin: auto 8px 8px;
+}
+
+.header-row .btn svg {
+    fill: $light-text;
+} 
+
+#header-phone {
+    fill: $dark-bg;
+}
+
+.circle svg {
+    fill: $light-text;
+    width: 23px;
+    height: auto;
+}
+.software .circle svg {
+    width: 18px;
+}

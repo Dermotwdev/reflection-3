@@ -1,0 +1,255 @@
+/* ----- body layout -----*/
+
+body {
+    overflow-x: hidden;
+}
+
+.banner-img { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 600px;
+    }  
+@for $i from 1 through 6 {
+    .slide-#{$i} {
+        background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1)), url('../img/body-img/Carousel #{$i}.jpg'),;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50%, 50%;
+    }
+}
+ 
+.banner-text {
+    display: flex;
+    flex-direction: column;     
+    align-items: center;
+}
+.banner-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.banner-p {
+    max-width: 470px;
+}
+
+.card-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.circle {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-color: $dark-bg;
+    margin-top: 30px;
+    svg {
+        margin: auto;
+    }
+}
+.card-container {
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 4px;
+    border: solid $brdr 1px;
+    background-color: $header-bg;
+    margin: 15px 15px;
+    box-shadow: 0px 0px 30px 12px $shadow;
+    p {
+        padding: 15px 30px;
+    }
+    a div {
+        margin: auto;
+    }
+    a {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    &:hover {
+        .divider, .btn, .circle {
+            background-color: $light-text;
+        } 
+    }
+}
+.divider {
+    width: 27px;
+    height: 3px;
+    background-color: $dark-bg;
+}
+.background-wrapper {
+    background-color: $dark-bg;
+    display: flex;
+    width: 100%;
+}
+ 
+.background-grid {
+    margin: auto;
+    display: flex;
+}
+
+.background-info {
+    padding: 50px 0;
+    margin: auto;
+    .btn {
+        margin-left: 15px;
+    }
+}
+.news-header-wrapper {
+    display: flex;
+}
+.news-header-grid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $header-bg;
+    justify-content: space-between;
+}
+
+.news-header {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.news-divider {
+    margin: auto 0 0 15px;
+    height: 5px;
+    width: 90px;
+    background-color: $dark-bg;
+}
+
+.news-wrapper {
+    display: flex;
+    flex-direction: column;
+    box-shadow: inset 0 15px 15px 0px $shadow;
+}
+
+.news-body {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-summary {
+    display: block;
+    padding-top: 15px;
+    width: 100%;
+    background-color: $header-bg;
+    & > * {
+        padding-left: 30px;
+        margin: auto 0px;
+    }
+    p {
+        padding-bottom: 25px;
+    }
+    h4 {
+        padding-bottom: 30px;
+    }
+}
+
+.news-card {
+    margin: 0 15px 30px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: $header-bg;
+    border: 1px solid $brdr;
+    border-radius: 3px;
+    box-shadow: 0px 10px 15px 0px $shadow;
+}
+
+.news-tag {
+    position: absolute;
+    right: 0px;
+    top: 10px;
+    padding: 5px;
+}
+.news-tooltip {
+    right: -35px;
+    padding: 10px 15px;
+    position: absolute;
+    background-color: $dark-bg;
+    top: -66px;
+    z-index: 100;
+    left: -35px;
+    opacity: 0;
+    transition-duration: 0.2s;
+}
+@for $j from 1 through 3 {
+    .tag-#{$j}:hover .tip-#{$j} {
+        opacity: 0.85;
+        transition-duration: 0.2s;
+    }
+}
+.news-tag .news-tooltip::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: $dark-bg transparent transparent transparent;
+  }
+.news-tag-it {
+        background: $it;
+    } 
+.news-tag-design {
+        background: $design;
+    }
+.news-img-container {
+    position: relative;
+}
+.news-img-border {
+    overflow: hidden;
+}
+.author {
+    display: inline;
+}
+.news-img {
+    width: 100%;
+}
+
+.author {
+    border-radius: 50%;
+    height: 47px;
+    width: 47px;
+    margin: 0 20px 0 0;
+}
+.nm {
+    background-image: url('../img/body-img/nm-brand.png');
+    background-size: cover;
+
+}
+.rob {
+    background-image: url('../img/news-img/Rob-author.jpg');
+    background-size: cover;
+}
+.news-details {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-top: 1px;
+}
+.news-footer {
+    padding: 30px 0;
+    margin: 0 30px;
+    border-top: 1px solid $dvdr;
+    display: flex;
+    p {
+        padding: 0;
+    }
+}
