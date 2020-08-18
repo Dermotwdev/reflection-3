@@ -1,0 +1,147 @@
+.cookie-container {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+}
+.cookie-message {
+    background: $header-bg;
+    flex-direction: column;
+    display: flex;
+    margin: auto;
+    border-radius: 5px;
+    button {
+        display: flex;
+        margin: 30px auto;
+        width: 100%;
+        padding: 0;
+        h4 {
+            margin: auto;
+        }
+    }
+} 
+.cookie-header {
+    border-bottom: 1px $dvdr solid;
+}
+.accept-settings {
+    border-top: 1px $dvdr solid;
+    padding: 0 20px;
+    width: 100%;
+    display: flex;
+}
+#settings {
+    background-color: $header-gray-btn;
+    &:hover {
+        background-color: darken($header-gray-btn, 5%);
+    }
+}
+#accept {
+    background-color: $design;
+    &:hover {
+        background-color: darken($design, 5%);
+    }
+}
+
+.cookie-settings {
+    position: absolute;
+    z-index: 10;
+    background: white;
+    overflow-y: auto;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    padding-bottom: 30px;
+        p {
+            padding: 10px 0;
+        }
+        h3 {
+            padding: 20px 0;
+        }
+        h2 {
+            padding: 15px 0;
+        }
+} 
+
+.cookie-settings > div {
+    width: 100%;
+    padding: 0 15px;
+}
+
+
+.btn-settings {
+    display: flex; 
+    .btn {
+        margin: 2px;
+    }
+}
+.cookie-settings {
+    display: none;
+    .detailed-cookies {
+        margin-bottom: 50px;
+    }
+}
+.cookie-table {
+    display: none;
+    overflow-x: auto;
+    margin: 10px 0 0 0;
+    thead {
+        th {
+            background-color: $brdr;
+            padding: 15px;
+            border-right: $header-bg 1px solid;
+            color: $light-text;
+            text-align: start;
+            &:last-of-type { 
+                border-right: none;
+            }
+        }
+    }
+    tbody {
+        th, td {
+            background-color: $srch;
+            border-top: $header-bg 1px solid;
+            border-right: $header-bg 1px solid;
+            padding: 15px;
+            text-align: start;
+            vertical-align: middle;
+        }
+        td:last-of-type {
+            border-right: none;
+            display: flex;
+        .btn {
+            margin: 2px;
+        }
+        }
+    }
+}
+.buttons {
+    display: flex;
+    .btn:first-of-type {
+        margin-right: 4px;
+    }
+}
+.light-btn {
+    background: $header-bg;
+    color: $srch-txt;
+    border: $brdr 1px solid;
+}
+.dark-btn {
+    background: $dark-bg;
+    color: $light-text;
+    &:hover {
+        background: darken($dark-bg, 5%)
+    }
+}
+.gray-btn {
+    background: $header-gray-btn;
+    &:hover {
+        background: darken($header-gray-btn, 5%)
+    }
+}

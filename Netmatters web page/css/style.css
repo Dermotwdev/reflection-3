@@ -376,6 +376,7 @@ body, header {
 
 h1, h2, h4, h5, .btn, .hide-nav {
   text-transform: uppercase;
+  color: white;
 }
 
 h1 {
@@ -405,6 +406,26 @@ strong {
 a, a:visited {
   text-decoration: none;
   color: currentcolor;
+}
+
+.cookie-container h3 {
+  font-size: 1.5em;
+  padding: 20px;
+}
+.cookie-container p {
+  font-size: 1em;
+  line-height: 1.7;
+  padding: 20px;
+}
+.cookie-container .cookie-settings p {
+  font-size: 0.8em;
+  line-height: 1.3;
+}
+.cookie-container .cookie-settings h2, .cookie-container .cookie-settings h5 {
+  color: #000;
+}
+.cookie-container .cookie-settings li {
+  list-style-type: disc;
 }
 
 .ham {
@@ -491,11 +512,12 @@ a.main-nav h4 {
 }
 .card h3 {
   font-size: 1.2em;
+  color: #000;
 }
 .card .btn {
   color: white;
 }
-.card:hover {
+.card:hover, .card:hover h3 {
   color: white;
 }
 
@@ -512,6 +534,10 @@ a.main-nav h4 {
 .culture-btn {
   font-size: 0.9em;
   font-size: 1.1em;
+}
+
+.news-header h3 {
+  color: #000;
 }
 
 .news-btn {
@@ -1712,370 +1738,6 @@ input {
   width: 18px;
 }
 
-/* Media queries */
-@media (max-width: 499px) {
-  .hide-sm {
-    display: none;
-  }
-}
-@media (min-width: 500px) {
-  .hide-sm {
-    display: none;
-  }
-
-  .show-sm {
-    display: inline;
-  }
-}
-@media (min-width: 768px) {
-  .hide-med {
-    display: none;
-  }
-
-  header {
-    height: 110px;
-  }
-
-  .header-row {
-    width: 750px;
-  }
-
-  .logo {
-    width: 348px;
-  }
-
-  .search-inline {
-    display: inline;
-    padding-right: 0;
-    margin-right: 0;
-    margin-left: 7px;
-  }
-
-  .search-container {
-    margin: auto 0;
-  }
-
-  .card-container {
-    width: 768px;
-    margin: 0 auto;
-    max-width: 100%;
-  }
-  .card-container .telecoms, .card-container .design, .card-container .security, .card-container .training {
-    width: 345px;
-  }
-  .card-container .telecoms p, .card-container .design p, .card-container .security p, .card-container .training p {
-    height: 87.6px;
-  }
-
-  .news-body {
-    margin: auto;
-    width: 750px;
-    flex-direction: row;
-  }
-
-  .news-card {
-    box-shadow: none;
-    margin: 0 15px;
-  }
-
-  .news-summary-1 {
-    box-shadow: 20px 0px 15px 0px #f0f0f0;
-  }
-
-  .news-summary-2 {
-    box-shadow: -20px 0px 15px 0px #f0f0f0;
-  }
-
-  .background-info {
-    width: 738px;
-  }
-
-  .news-header-wrapper {
-    display: flex;
-  }
-
-  .news-header {
-    width: 750px;
-    margin: 0 auto;
-  }
-
-  .main-footer {
-    width: 750px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .main-footer .footer-contact, .main-footer .footer-website, .main-footer .footer-about, .main-footer .footer-social {
-    width: 345px;
-  }
-
-  .accolades-wrapper {
-    display: flex;
-  }
-
-  .organisations-wrapper {
-    display: flex;
-  }
-}
-@media (min-width: 992px) {
-  .hide-lg {
-    display: none;
-  }
-
-  header {
-    height: 205px;
-  }
-
-  .header-row {
-    width: 970px;
-    margin-bottom: 10px;
-  }
-  .header-row a {
-    margin: 0px 20px auto 0;
-  }
-
-  .logo {
-    width: 371.08px;
-    padding-top: 2px;
-  }
-
-  .card-container {
-    width: 970px;
-  }
-  .card-container .telecoms, .card-container .design, .card-container .security, .card-container .training {
-    width: 455px;
-  }
-  .card-container .software, .card-container .it, .card-container .marketing {
-    width: 293.33px;
-  }
-
-  .hidden-header-content-lg {
-    display: flex;
-    margin-left: 55px;
-  }
-
-  .nav-container a {
-    width: 155.5px;
-  }
-
-  .nav-container {
-    display: flex;
-  }
-
-  .nav-bar-grid {
-    width: 970px;
-    margin: 0 auto;
-    display: flex;
-  }
-  .nav-bar-grid li {
-    width: 156.45px;
-  }
-
-  .sub-nav-content {
-    width: 970px;
-  }
-
-  .banner-img {
-    display: flex;
-  }
-  .banner-img p {
-    text-align: left;
-  }
-  .banner-img .banner-btn {
-    margin: 15px 0 0 15px;
-  }
-
-  .banner-text-wrapper {
-    width: 970px;
-    margin: 0 auto;
-  }
-
-  .banner-text {
-    display: block;
-    width: 455px;
-    margin: 0 auto 0 0;
-    align-items: start;
-  }
-
-  .card-content {
-    width: 100%;
-  }
-  .card-content p {
-    height: auto;
-  }
-
-  .news-header {
-    width: 970px;
-  }
-
-  .news-img {
-    transition-delay: 0.05s;
-    transition-duration: 0.2s;
-    object-fit: cover;
-  }
-
-  .news-tag:hover .news-img {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-
-  .news-img:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
-  }
-
-  .news-body {
-    margin: auto;
-    width: 970px;
-  }
-
-  .background-info {
-    width: 962px;
-  }
-
-  .background-wrapper {
-    background-image: url(../img/body-img/nm-brand.png);
-    background-color: #333645;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 100% center;
-  }
-
-  .organisations, .accolades {
-    width: 970px;
-  }
-
-  .beat .beat-desc::after,
-.crane .crane-desc::after,
-.northern-diver .northern-diver-desc::after,
-.busseys .busseys-desc::after {
-    left: 37%;
-  }
-
-  .main-footer {
-    width: 970px;
-  }
-  .main-footer .footer-contact, .main-footer .footer-website, .main-footer .footer-about, .main-footer .footer-social {
-    width: 485px;
-  }
-}
-@media (min-width: 1260px) {
-  .hide-xl {
-    display: none;
-  }
-
-  .header-row {
-    width: 1200px;
-  }
-
-  .hide-nav ul li {
-    padding: 0 0 0 30px;
-  }
-  .hide-nav ul li::after {
-    padding-left: 30px;
-  }
-
-  .search-4 {
-    display: inline;
-  }
-
-  .search-inline {
-    width: 240px;
-  }
-
-  .nav-bar-grid {
-    width: 1200px;
-  }
-  .nav-bar-grid li {
-    width: 194.5px;
-  }
-
-  .nav-container a {
-    width: 193.83px;
-  }
-
-  .news-body {
-    padding: 50px 0;
-    display: flex;
-    box-sizing: border-box;
-  }
-
-  .sub-nav-content {
-    width: 1200px;
-    font-size: 1em;
-  }
-
-  .card-content {
-    width: 100%;
-  }
-
-  .card-container {
-    margin: 0 auto;
-    width: 1200px;
-  }
-  .card-container .software, .card-container .it, .card-container .marketing {
-    width: 368px;
-  }
-  .card-container .telecoms, .card-container .design, .card-container .security, .card-container .training {
-    width: 268px;
-  }
-  .card-container .telecoms p, .card-container .design p, .card-container .security p, .card-container .training p {
-    height: 106.8px;
-  }
-
-  .background-grid, .banner-text-wrapper {
-    width: 1200px;
-  }
-
-  .background-info, .banner-text {
-    width: 600px;
-    margin-left: 0;
-  }
-
-  .news-header {
-    width: 1200px;
-  }
-
-  .news-card {
-    display: flex;
-  }
-
-  .news-body {
-    width: 1200px;
-  }
-
-  .news-summary-2 {
-    box-shadow: 20px 0px 15px 0px #f0f0f0, -20px 0px 15px 0px #f0f0f0;
-  }
-
-  .news-summary-3 {
-    box-shadow: -20px 0px 15px 0px #f0f0f0;
-  }
-
-  .organisations {
-    width: 1200px;
-  }
-
-  .main-footer {
-    width: 1200px;
-    margin: 0 auto;
-  }
-  .main-footer .footer-contact, .main-footer .footer-website, .main-footer .footer-about, .main-footer .footer-social {
-    width: 300px;
-  }
-
-  .accolades {
-    width: 1200px;
-  }
-
-  .beat .beat-desc::after,
-.crane .crane-desc::after,
-.northern-diver .northern-diver-desc::after,
-.busseys .busseys-desc::after {
-    left: 39%;
-  }
-}
 .slick-initialized .slick-slide {
   display: flex;
 }
@@ -2232,6 +1894,549 @@ input {
 #nav li:nth-child(12) li {
   height: 40px;
   background-color: gray;
+}
+
+.cookie-container {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+}
+
+.cookie-message {
+  background: white;
+  flex-direction: column;
+  display: flex;
+  margin: auto;
+  border-radius: 5px;
+}
+.cookie-message button {
+  display: flex;
+  margin: 30px auto;
+  width: 100%;
+  padding: 0;
+}
+.cookie-message button h4 {
+  margin: auto;
+}
+
+.cookie-header {
+  border-bottom: 1px lightgray solid;
+}
+
+.accept-settings {
+  border-top: 1px lightgray solid;
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+}
+
+#settings {
+  background-color: #84858f;
+}
+#settings:hover {
+  background-color: #777883;
+}
+
+#accept {
+  background-color: #926fb1;
+}
+#accept:hover {
+  background-color: #855ea8;
+}
+
+.cookie-settings {
+  position: absolute;
+  z-index: 10;
+  background: white;
+  overflow-y: auto;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  padding-bottom: 30px;
+}
+.cookie-settings p {
+  padding: 10px 0;
+}
+.cookie-settings h3 {
+  padding: 20px 0;
+}
+.cookie-settings h2 {
+  padding: 15px 0;
+}
+
+.cookie-settings > div {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.btn-settings {
+  display: flex;
+}
+.btn-settings .btn {
+  margin: 2px;
+}
+
+.cookie-settings {
+  display: none;
+}
+.cookie-settings .detailed-cookies {
+  margin-bottom: 50px;
+}
+
+.cookie-table {
+  display: none;
+  overflow-x: auto;
+  margin: 10px 0 0 0;
+}
+.cookie-table thead th {
+  background-color: #c0c0c0;
+  padding: 15px;
+  border-right: white 1px solid;
+  color: white;
+  text-align: start;
+}
+.cookie-table thead th:last-of-type {
+  border-right: none;
+}
+.cookie-table tbody th, .cookie-table tbody td {
+  background-color: #e6e6e6;
+  border-top: white 1px solid;
+  border-right: white 1px solid;
+  padding: 15px;
+  text-align: start;
+  vertical-align: middle;
+}
+.cookie-table tbody td:last-of-type {
+  border-right: none;
+  display: flex;
+}
+.cookie-table tbody td:last-of-type .btn {
+  margin: 2px;
+}
+
+.buttons {
+  display: flex;
+}
+.buttons .btn:first-of-type {
+  margin-right: 4px;
+}
+
+.light-btn {
+  background: white;
+  color: #9c9c9c;
+  border: #c0c0c0 1px solid;
+}
+
+.dark-btn {
+  background: #333645;
+  color: white;
+}
+.dark-btn:hover {
+  background: #282b36;
+}
+
+.gray-btn {
+  background: #84858f;
+}
+.gray-btn:hover {
+  background: #777883;
+}
+
+/* Media queries */
+@media (max-width: 499px) {
+  .hide-sm {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  .hide-sm {
+    display: none;
+  }
+
+  .show-sm {
+    display: inline;
+  }
+}
+@media (min-width: 768px) {
+  .hide-med {
+    display: none;
+  }
+
+  .cookie-message {
+    width: 600px;
+  }
+  .cookie-message .buttons {
+    display: flex;
+  }
+  .cookie-message button {
+    width: 45%;
+    display: flex;
+  }
+
+  .cookie-settings > div {
+    width: 750px;
+    margin: auto;
+  }
+
+  header {
+    height: 110px;
+  }
+
+  .header-row {
+    width: 750px;
+  }
+
+  .logo {
+    width: 348px;
+  }
+
+  .search-inline {
+    display: inline;
+    padding-right: 0;
+    margin-right: 0;
+    margin-left: 7px;
+  }
+
+  .search-container {
+    margin: auto 0;
+  }
+
+  .card-container {
+    width: 768px;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+  .card-container .telecoms, .card-container .design, .card-container .security, .card-container .training {
+    width: 345px;
+  }
+  .card-container .telecoms p, .card-container .design p, .card-container .security p, .card-container .training p {
+    height: 87.6px;
+  }
+
+  .news-body {
+    margin: auto;
+    width: 750px;
+    flex-direction: row;
+  }
+
+  .news-card {
+    box-shadow: none;
+    margin: 0 15px;
+  }
+
+  .news-summary-1 {
+    box-shadow: 20px 0px 15px 0px #f0f0f0;
+  }
+
+  .news-summary-2 {
+    box-shadow: -20px 0px 15px 0px #f0f0f0;
+  }
+
+  .background-info {
+    width: 738px;
+  }
+
+  .news-header-wrapper {
+    display: flex;
+  }
+
+  .news-header {
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  .main-footer {
+    width: 750px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .main-footer .footer-contact, .main-footer .footer-website, .main-footer .footer-about, .main-footer .footer-social {
+    width: 345px;
+  }
+
+  .accolades-wrapper {
+    display: flex;
+  }
+
+  .organisations-wrapper {
+    display: flex;
+  }
+}
+@media (min-width: 992px) {
+  .hide-lg {
+    display: none;
+  }
+
+  .cookie-settings > div {
+    width: 970px;
+  }
+
+  header {
+    height: 205px;
+  }
+
+  .header-row {
+    width: 970px;
+    margin-bottom: 10px;
+  }
+  .header-row a {
+    margin: 0px 20px auto 0;
+  }
+
+  .logo {
+    width: 371.08px;
+    padding-top: 2px;
+  }
+
+  .card-container {
+    width: 970px;
+  }
+  .card-container .telecoms, .card-container .design, .card-container .security, .card-container .training {
+    width: 455px;
+  }
+  .card-container .software, .card-container .it, .card-container .marketing {
+    width: 293.33px;
+  }
+
+  .hidden-header-content-lg {
+    display: flex;
+    margin-left: 55px;
+  }
+
+  .nav-container a {
+    width: 155.5px;
+  }
+
+  .nav-container {
+    display: flex;
+  }
+
+  .nav-bar-grid {
+    width: 970px;
+    margin: 0 auto;
+    display: flex;
+  }
+  .nav-bar-grid li {
+    width: 156.45px;
+  }
+
+  .sub-nav-content {
+    width: 970px;
+  }
+
+  .banner-img {
+    display: flex;
+  }
+  .banner-img p {
+    text-align: left;
+  }
+  .banner-img .banner-btn {
+    margin: 15px 0 0 15px;
+  }
+
+  .banner-text-wrapper {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  .banner-text {
+    display: block;
+    width: 455px;
+    margin: 0 auto 0 0;
+    align-items: start;
+  }
+
+  .card-content {
+    width: 100%;
+  }
+  .card-content p {
+    height: auto;
+  }
+
+  .news-header {
+    width: 970px;
+  }
+
+  .news-img {
+    transition-delay: 0.05s;
+    transition-duration: 0.2s;
+    object-fit: cover;
+  }
+
+  .news-tag:hover .news-img {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  .news-img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+
+  .news-body {
+    margin: auto;
+    width: 970px;
+  }
+
+  .background-info {
+    width: 962px;
+  }
+
+  .background-wrapper {
+    background-image: url(../img/body-img/nm-brand.png);
+    background-color: #333645;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 100% center;
+  }
+
+  .organisations, .accolades {
+    width: 970px;
+  }
+
+  .beat .beat-desc::after,
+.crane .crane-desc::after,
+.northern-diver .northern-diver-desc::after,
+.busseys .busseys-desc::after {
+    left: 37%;
+  }
+
+  .main-footer {
+    width: 970px;
+  }
+  .main-footer .footer-contact, .main-footer .footer-website, .main-footer .footer-about, .main-footer .footer-social {
+    width: 485px;
+  }
+}
+@media (min-width: 1260px) {
+  .hide-xl {
+    display: none;
+  }
+
+  .cookie-settings > div {
+    width: 1200px;
+  }
+
+  .header-row {
+    width: 1200px;
+  }
+
+  .hide-nav ul li {
+    padding: 0 0 0 30px;
+  }
+  .hide-nav ul li::after {
+    padding-left: 30px;
+  }
+
+  .search-4 {
+    display: inline;
+  }
+
+  .search-inline {
+    width: 240px;
+  }
+
+  .nav-bar-grid {
+    width: 1200px;
+  }
+  .nav-bar-grid li {
+    width: 194.5px;
+  }
+
+  .nav-container a {
+    width: 193.83px;
+  }
+
+  .news-body {
+    padding: 50px 0;
+    display: flex;
+    box-sizing: border-box;
+  }
+
+  .sub-nav-content {
+    width: 1200px;
+    font-size: 1em;
+  }
+
+  .card-content {
+    width: 100%;
+  }
+
+  .card-container {
+    margin: 0 auto;
+    width: 1200px;
+  }
+  .card-container .software, .card-container .it, .card-container .marketing {
+    width: 368px;
+  }
+  .card-container .telecoms, .card-container .design, .card-container .security, .card-container .training {
+    width: 268px;
+  }
+  .card-container .telecoms p, .card-container .design p, .card-container .security p, .card-container .training p {
+    height: 106.8px;
+  }
+
+  .background-grid, .banner-text-wrapper {
+    width: 1200px;
+  }
+
+  .background-info, .banner-text {
+    width: 600px;
+    margin-left: 0;
+  }
+
+  .news-header {
+    width: 1200px;
+  }
+
+  .news-card {
+    display: flex;
+  }
+
+  .news-body {
+    width: 1200px;
+  }
+
+  .news-summary-2 {
+    box-shadow: 20px 0px 15px 0px #f0f0f0, -20px 0px 15px 0px #f0f0f0;
+  }
+
+  .news-summary-3 {
+    box-shadow: -20px 0px 15px 0px #f0f0f0;
+  }
+
+  .organisations {
+    width: 1200px;
+  }
+
+  .main-footer {
+    width: 1200px;
+    margin: 0 auto;
+  }
+  .main-footer .footer-contact, .main-footer .footer-website, .main-footer .footer-about, .main-footer .footer-social {
+    width: 300px;
+  }
+
+  .accolades {
+    width: 1200px;
+  }
+
+  .beat .beat-desc::after,
+.crane .crane-desc::after,
+.northern-diver .northern-diver-desc::after,
+.busseys .busseys-desc::after {
+    left: 39%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

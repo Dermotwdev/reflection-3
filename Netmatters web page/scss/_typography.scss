@@ -6,6 +6,7 @@ body, header {
 }
 h1, h2, h4, h5, .btn, .hide-nav {
     text-transform: uppercase;
+    color: $light-text;
 }
 h1 {
     font-size: 3em;
@@ -28,6 +29,29 @@ strong {
 a, a:visited {
     text-decoration: none;
     color: currentcolor;
+}
+.cookie-container {
+    h3 {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+    p {
+       font-size: 1em; 
+       line-height: 1.7;
+       padding: 20px;
+    }
+    .cookie-settings {
+        p {
+            font-size: 0.8em;
+            line-height: 1.3;
+        }
+        h2, h5 {
+            color: $dark-text;
+        }
+        li {
+          list-style-type: disc;  
+        } 
+    }
 }
 .ham {
     color: $light-text;
@@ -102,11 +126,12 @@ a.main-nav {
     }
     h3 {
         font-size: 1.2em;
+        color: $dark-text;
     }
     .btn {
         color: $light-text;
     }
-    &:hover {
+    &:hover, &:hover h3  {
         color: $light-text;
     }
 }
@@ -123,6 +148,11 @@ a.main-nav {
 .culture-btn {
     font-size: 0.9em;
     font-size: 1.1em;
+}
+.news-header {
+    h3 {
+        color: $dark-text;
+    }
 }
 .news-btn {
     color: $light-text;

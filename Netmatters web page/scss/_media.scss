@@ -18,6 +18,20 @@
    .hide-med {
         display: none;
    }
+   .cookie-message {
+        width: 600px;
+        .buttons {
+            display: flex;
+        }
+       button {
+        width: 45%;
+        display: flex;
+       }
+   }
+   .cookie-settings > div {
+       width: 750px;
+       margin: auto;
+   }
    header {
        height: 110px;
    }
@@ -42,9 +56,9 @@
     max-width: 100%;
         .telecoms, .design, .security, .training {
             width: 345px;
-        p {
-            height: 87.6px;
-        }
+            p {
+                height: 87.6px;
+            }
         } 
     }
    .news-body {
@@ -95,6 +109,9 @@
 @media (min-width: $lg) {
     .hide-lg {
       display: none;
+    }
+    .cookie-settings > div {
+        width: 970px;
     }
     header {
         height: 205px;
@@ -221,6 +238,9 @@
     .hide-xl {
         display: none;
     }
+    .cookie-settings > div {
+        width: 1200px;
+    } 
     .header-row {
         width: 1200px;
         // a {
