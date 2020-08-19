@@ -1,30 +1,45 @@
+// CSS reset
 @import "_reset.scss";
 
+// Variables for colours, breakpoint widths and includes fonts 
 @import "_utilities.scss";
 
+// Font sizes, choices etc for ALL sections
 @import "_typography.scss";
 
+// General containers
 @import "_layout.scss";
 
+// Header content styling
 @import "_header.scss";
 
+// Body content styling
 @import "_body.scss";
 
+// Footer content styling
 @import "_footer.scss";
 
+// Reused styles for eg h1 elements and theme colours that aren't related to theme colours
 @import "_components.scss";
 
+// Search bar styles
 @import "_search-bars.scss";
 
+// Button styles
 @import "_buttons.scss";
 
+// Icon styling
 @import "_icons.scss";
 
+// Carousel stylings
 @import "_slick.scss";
 
+// hamburger menu and side menu stylings + animations
 @import "_hamburger.scss";
 
+// Cookie notice stylings
 @import "_cookie-notice.scss";
 
+// Media Queries
 @import "_media.scss";
 

@@ -104,6 +104,28 @@ a.main-nav {
     font-size: 0.8em;
 }
 
+#nav {
+    text-transform: uppercase;
+    ul.hide-lg > li ul {
+        font-size: 1rem;
+    }
+    h3 {
+        font-size: 1.1rem;
+    }
+    & > ul:last-of-type ul {
+        h3 {
+            font-size: 1rem;
+        }
+        li a {
+        font-size: 0.9rem;
+        }
+    }
+    ul h5 {
+        line-height: 1;
+        font-size: 0.65rem;
+    }
+}
+
 .banner-img {
     color: $light-text;
 }

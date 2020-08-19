@@ -127,7 +127,7 @@
         width: 371.08px;
         padding-top: 2px;
     }
-  .card-container {
+    .card-container {
     width: 970px;
         .telecoms, .design, .security, .training {
         width: 455px;
@@ -157,6 +157,15 @@
     }
     .sub-nav-content {
         width: 970px;
+    }
+    #nav {
+        width: 350px;
+        a {
+            width: 100%;
+        }
+    }
+    body.expanded {
+        left: -350px;
     }
     .banner-img {
         display: flex;
