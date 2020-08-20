@@ -1613,6 +1613,10 @@ input {
   box-shadow: inset 0px 1px 4px -2px darkgrey;
 }
 
+.mag-button svg {
+  margin: auto;
+}
+
 /* -----button styling ----*/
 .btn {
   border-radius: 3px;
@@ -1835,6 +1839,7 @@ input {
 
 .nav-toggle-bar {
   width: 50%;
+  left: 25%;
 }
 
 .nav-toggle-bar::before, .nav-toggle-bar::after {
@@ -1844,14 +1849,11 @@ input {
 .nav-toggle .nav-toggle-bar, .nav-toggle .nav-toggle-bar::after, .nav-toggle .nav-toggle-bar::before {
   position: absolute;
   top: 34%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
   background: white;
   content: "";
   height: 0.15em;
@@ -1890,6 +1892,13 @@ input {
   transform: rotate(-45deg);
 }
 
+#nav {
+  z-index: 1;
+}
+#nav * {
+  z-index: 1;
+}
+
 #nav > ul:last-of-type ul li {
   background-color: #282b36;
   display: flex;
@@ -1918,7 +1927,16 @@ body.expanded {
   height: 100%;
 }
 
-body:after {
+body {
+  left: 0;
+  -webkit-transition: left 1s ease;
+  -moz-transition: left 1s ease;
+  -ms-transition: left 1s ease;
+  -o-transition: left 1s ease;
+  transition: left 1s ease;
+}
+
+Darkens out the rest of the website to interact with body:after {
   top: 0;
   right: 0;
   width: 0;
@@ -1935,15 +1953,14 @@ body.expanded:after {
   width: 100%;
   height: 100%;
   opacity: 1;
-  transition: opacity 0.5s;
 }
 
 .nav {
-  -webkit-transition: right 0.5s ease;
-  -moz-transition: right 0.5s ease;
-  -ms-transition: right 0.5s ease;
-  -o-transition: right 0.5s ease;
-  transition: right 0.5s ease;
+  -webkit-transition: right 1s ease;
+  -moz-transition: right 0s ease;
+  -ms-transition: right 0s ease;
+  -o-transition: right 0s ease;
+  transition: right 0s ease;
   background: #333645;
   color: white;
   font-size: 18px;
@@ -2031,7 +2048,7 @@ body.expanded:after {
 .cookie-container {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   overflow-x: hidden;
   overflow-y: hidden;
   height: 100%;
@@ -2084,7 +2101,7 @@ body.expanded:after {
 
 .cookie-settings {
   position: absolute;
-  z-index: 10;
+  z-index: 21;
   background: white;
   overflow-y: auto;
   flex-direction: column;
@@ -2371,6 +2388,10 @@ body.expanded:after {
   }
   #nav a {
     width: 100%;
+  }
+
+  .nav {
+    right: -50rem;
   }
 
   body.expanded {

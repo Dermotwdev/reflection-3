@@ -1,0 +1,15 @@
+{
+  "name": "netmatters-js-reflection",
+  "version": "1.0.0",
+  "description": "recreation of netmatters homepage featuring js elements",
+  "main": "./",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dermot wilson",
+  "license": "ISC",
+  "dependencies": {
+    "jquery.mmenu": "^7.3.3",
+    "mmenu-js": "^8.5.15"
+  }
+}
