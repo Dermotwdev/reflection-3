@@ -69,12 +69,12 @@
     transform: rotate(-45deg);
   }
 
-  #nav {
-    z-index: 1;
-      & * {
-        z-index: 1;
-        }
-  }
+  // #nav {
+  //   z-index: 1;
+  //     & * {
+  //       z-index: 1;
+  //       }
+  // }
 
   #nav > ul:last-of-type ul li {
         background-color: darken($dark-bg, 5%);
@@ -110,11 +110,11 @@ body.expanded {
 }
 body { 
   left: 0;
-  -webkit-transition: left 1s ease;
-  -moz-transition: left 1s ease;
-  -ms-transition: left 1s ease;
-  -o-transition: left 1s ease;
-  transition: left 1s ease;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
 } 
 
 Darkens out the rest of the website to interact with
@@ -127,7 +127,7 @@ body:after {
   z-index: 10;
   content: "";
   opacity: 0;
-transition: opacity .5s,width .1s .5s,height .1s .5s;
+transition: opacity .5s, width .1s .5s, height .1s .5s;
 }
   body.expanded:after {
     position: absolute;
@@ -139,11 +139,11 @@ transition: opacity .5s,width .1s .5s,height .1s .5s;
 
 // Sidebar styles
 .nav {
-  -webkit-transition: right 1s ease;
-  -moz-transition: right 0s ease;
-  -ms-transition: right 0s ease;
-  -o-transition: right 0s ease;
-  transition: right 0s ease;
+  -webkit-transition: right .5s ease;
+  -moz-transition: right 0.5s ease;
+  -ms-transition: right 0.5s ease;
+  -o-transition: right 0.5s ease;
+  transition: right 0.5s ease;
   background: $dark-bg;
   color: $light-text;
   font-size: 18px;
@@ -154,7 +154,7 @@ transition: opacity .5s,width .1s .5s,height .1s .5s;
   width: 275px;
   z-index: 1;
   overflow-y: scroll; 
-  h4 {
+  h4 {  
     padding: 0 0 15px;
   }
   ul {

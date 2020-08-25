@@ -1,0 +1,14 @@
+{
+  "name": "image-email-linker",
+  "version": "1.0.0",
+  "description": "Short javascript program using the unsplash API to link an email to a random photo",
+  "main": "/js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dermot wilson",
+  "license": "ISC",
+  "dependencies": {
+    "unsplash-js": "^6.0.0"
+  }
+}

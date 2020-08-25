@@ -1,0 +1,60 @@
+* {
+    margin: auto;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'helvetica';
+    font-size: 20px;
+}
+input {
+    font-size: 18px;
+    background: lightgrey;
+    border: darkgray 1px solid;
+    padding: 10px 5px;
+}
+button {
+    background: yellow;
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+.container {
+    
+    min-height: 100vh;
+    align-content: center;
+    display: flex;
+    background: linear-gradient(45deg, rgba(10,5,74,1) 0%, rgba(20,166,162,1) 15%, rgba(24,155,127,1) 25%, rgba(167,163,19,1) 55%, rgba(16,176,183,1) 76%, rgba(26,151,132,1) 90%, rgba(5,199,70,1) 100%)
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px 15px;
+    min-height: 85%;
+    min-width: 85%;
+    border-radius: 20px;
+}
+img {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+}
+.img-container {
+    display: flex;
+}
+h1 {
+    margin-bottom: 20px;
+}
+form {
+    margin: 20px auto;
+}
+ul li img {
+    height: 200px;
+    width: auto;
+}
+ul li {
+    display: flex;
+    align-items: center;
+}
