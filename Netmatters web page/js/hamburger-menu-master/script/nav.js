@@ -1,39 +1,56 @@
-// (function() {
-
-// 	let hamburger = {
+// **** Code written by me ****
+// (function () {
+// let hamburger = {
 // 		nav: document.querySelector('#nav'),
 // 		navToggle: document.querySelector('.nav-toggle'),
-// 		body: document.querySelector('body'),
-// 		bodyA: document.querySelector('body:after'),
-// 		contact: document.querySelector('.contact'),
+// 		blocker: document.querySelector('#blocker'),
+//     contact: document.querySelector('.contact'),
+//     body: document.querySelector('body'),
 
 // 		initialize() {
-// 			this.navToggle.addEventListener('click', () => { this.toggle(); });
+//       this.navToggle.addEventListener('click', () => { this.toggle(); });
 // 		},
 
 // 		toggle() {
-// 			this.navToggle.classList.toggle('expanded');
+//       console.log('toggled')
+//       // Set page style to expanded
+//       this.navToggle.classList.toggle('expanded');
 // 			this.nav.classList.toggle('expanded');
-// 			this.body.classList.toggle('expanded');
-// 			this.body.classList.toggle('noScroll');
-// 			this.body.classList.toggle('nav-toggle');
-// 			// this.bodyA.classList.toggle('expanded');
-// 		},
+//       this.body.classList.toggle('expanded');
+//       this.blocker.classList.toggle('expanded');
+//       // Set rest of page to not scroll
+//       this.body.classList.toggle('noScroll');
+//       // Allow clicking anywhere on 
+//       if(this.blocker.classList.contains('expanded')) {
+//         this.blocker.addEventListener('click', togglEvent);
+//       } else {
+//         this.removeEvent();
+//       }
+//     },
+//     removeEvent() {
+//       console.log('Event removed')
+//       this.blocker.removeEventListener('click', togglEvent);
+//     }
 // 	};
 
-// 	hamburger.initialize();
+//   hamburger.initialize();
 
-// }());
+//   const togglEvent = function toggleEvent() {
+//     hamburger.toggle();
+//   }
+// })();
 
+
+// **** Babel Code ****
 "use strict";
 
 (function () {
   var hamburger = {
     nav: document.querySelector('#nav'),
     navToggle: document.querySelector('.nav-toggle'),
-    body: document.querySelector('body'),
-    bodyA: document.querySelector('body:after'),
+    blocker: document.querySelector('#blocker'),
     contact: document.querySelector('.contact'),
+    body: document.querySelector('body'),
     initialize: function initialize() {
       var _this = this;
 
@@ -42,12 +59,29 @@
       });
     },
     toggle: function toggle() {
+      console.log('toggled'); // Set page style to expanded
+
       this.navToggle.classList.toggle('expanded');
       this.nav.classList.toggle('expanded');
       this.body.classList.toggle('expanded');
-      this.body.classList.toggle('noScroll');
-      this.body.classList.toggle('nav-toggle');
+      this.blocker.classList.toggle('expanded'); // Set rest of page to not scroll
+
+      this.body.classList.toggle('noScroll'); // Allow clicking anywhere on 
+
+      if (this.blocker.classList.contains('expanded')) {
+        this.blocker.addEventListener('click', togglEvent);
+      } else {
+        this.removeEvent();
+      }
+    },
+    removeEvent: function removeEvent() {
+      console.log('Event removed');
+      this.blocker.removeEventListener('click', togglEvent);
     }
   };
   hamburger.initialize();
+
+  var togglEvent = function toggleEvent() {
+    hamburger.toggle();
+  };
 })();

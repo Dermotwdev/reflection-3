@@ -1,3 +1,4 @@
+// **** Code written by me ****
 // // Store whether cookies have been accepted
 // // Store different types of cookies selection
 
@@ -93,12 +94,12 @@
 //     $('.cookie-container').css("display", "none");
 // })
 
+// **** Babel Code to ensure it is compatible in dif. browsers ****
 "use strict";
 
 // Store whether cookies have been accepted
 // Store different types of cookies selection
 var cookies = {
-  cookieAccept: undefined,
   functional: true,
   performance: true,
   company: [true, true, true, true, true, true]
@@ -184,6 +185,7 @@ $('.accept').click(function () {
   $('body').css("overflow", "");
   cookies.cookieAccept = true;
   localStorage.cookieAccept = true;
+  localStorage.cookiesChoices = JSON.stringify(cookies);
   console.log(localStorage);
   $('.cookie-settings').css("display", "none");
   $('.cookie-container').css("display", "none");

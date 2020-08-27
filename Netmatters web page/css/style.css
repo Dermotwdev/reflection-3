@@ -1892,13 +1892,6 @@ input {
   transform: rotate(-45deg);
 }
 
-#nav {
-  z-index: 1;
-}
-#nav * {
-  z-index: 1;
-}
-
 #nav > ul:last-of-type ul li {
   background-color: #282b36;
   display: flex;
@@ -1929,43 +1922,24 @@ body.expanded {
 
 body {
   left: 0;
-  -webkit-transition: left 1s ease;
-  -moz-transition: left 1s ease;
-  -ms-transition: left 1s ease;
-  -o-transition: left 1s ease;
-  transition: left 1s ease;
-}
-
-Darkens out the rest of the website to interact with body:after {
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 10;
-  content: "";
-  opacity: 0;
-  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
-}
-
-body.expanded:after {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
 }
 
 .nav {
-  -webkit-transition: right 1s ease;
-  -moz-transition: right 0s ease;
-  -ms-transition: right 0s ease;
-  -o-transition: right 0s ease;
-  transition: right 0s ease;
+  -webkit-transition: right 0.5s ease;
+  -moz-transition: right 0.5s ease;
+  -ms-transition: right 0.5s ease;
+  -o-transition: right 0.5s ease;
+  transition: right 0.5s ease;
   background: #333645;
   color: white;
   font-size: 18px;
   height: 100vh;
-  right: -20rem;
+  right: -17.2rem;
   position: fixed;
   top: 0;
   width: 275px;
@@ -2043,6 +2017,26 @@ body.expanded:after {
 
 .noScroll {
   overflow: hidden;
+}
+
+#blocker:after {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 30;
+  content: "";
+  opacity: 0;
+  transition: opacity 0.1s, width 0s, height 0s;
+}
+
+#blocker.expanded:after {
+  height: 100vh;
+  width: 100vw;
+  opacity: 1;
 }
 
 .cookie-container {
@@ -2391,7 +2385,7 @@ body.expanded:after {
   }
 
   .nav {
-    right: -50rem;
+    right: -22rem;
   }
 
   body.expanded {
