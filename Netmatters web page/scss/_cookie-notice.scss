@@ -6,10 +6,11 @@
     overflow-y: hidden;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(230, 223, 223, 0.8);
     padding: 30px;
 }
 .cookie-message {
+    height: 31.3em;
     background: $header-bg;
     flex-direction: column;
     display: flex;
@@ -127,7 +128,7 @@
         margin-right: 4px;
     }
 }
-.light-btn {
+.cookie-btn {
     background: $header-bg;
     color: $srch-txt;
     border: $brdr 1px solid;
