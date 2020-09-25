@@ -32,7 +32,7 @@
        width: 750px;
        margin: auto;
    }
-   header {
+   header, .shy-container {
        height: 110px;
    }
    .header-row {
@@ -113,7 +113,7 @@
     .cookie-settings > div {
         width: 970px;
     }
-    header {
+    header, .shy-container {
         height: 205px;
     }
     .header-row {
@@ -164,11 +164,11 @@
             width: 100%;
         }
     }
-    .nav {
-        right: -22rem;
-    }
-    body.expanded {
+    .page-content.expanded {
         left: -350px;
+    }
+    #blocker.expanded:after {
+        right: 350px;
     }
     .banner-img {
         display: flex;

@@ -102,13 +102,15 @@
 
   // Body transitions 
 
-body.expanded {
+.page-content.expanded {
     left: -275px; 
     position: relative;
     z-index: 9;
     height: 100%;
 }
-body { 
+.page-content {
+  height: 100%;
+  overflow-y: auto;
   left: 0;
   -webkit-transition: left 0.5s ease;
   -moz-transition: left 0.5s ease;
@@ -128,9 +130,9 @@ body {
   color: $light-text;
   font-size: 18px;
   height: 100vh;
-  right: -17.2rem;
+  right: 0;
   position: fixed;
-  top: 0;
+  top: 0; 
   width: 275px;
   z-index: 1;
   overflow-y: scroll; 
@@ -180,13 +182,13 @@ body {
 }
 }
 
-.nav.expanded { 
-  right: 0;
-  position: fixed; 
-  overflow: auto; 
-  left: auto;
-  z-index: 10;
- }  
+// .nav.expanded { 
+//   right: 0;
+//   position: fixed; 
+//   overflow: auto; 
+//   left: auto;
+//   z-index: 10;
+//  }  
 
  .side-icon {
   display: flex;
@@ -221,10 +223,11 @@ body {
   z-index: 30;
   content: "";
   opacity: 0;
-  transition: opacity 0.1s, width 0s, height 0s ;
+  transition: opacity 0.1s, width 0s, height 0s, right 0.5s ease ;
 }
 #blocker.expanded:after {
   height: 100vh;
   width: 100vw;
   opacity: 1;
+  right: 275px
 }

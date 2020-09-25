@@ -659,6 +659,8 @@ header {
   width: 100%;
   background-color: white;
   height: 169px;
+  position: static;
+  transition: position 1s ease 1s;
 }
 
 .header-top-container {
@@ -801,6 +803,22 @@ a.main-nav h4 {
 body {
   overflow-x: hidden;
   position: relative;
+}
+
+body, html {
+  height: 100%;
+}
+
+.page-content {
+  overflow-x: hidden;
+  position: relative;
+  z-index: 15;
+  background-color: white;
+}
+
+.page, .page-container {
+  height: 100%;
+  overflow: hidden;
 }
 
 .banner-img {
@@ -1913,14 +1931,16 @@ input {
   flex-direction: column;
 }
 
-body.expanded {
+.page-content.expanded {
   left: -275px;
   position: relative;
   z-index: 9;
   height: 100%;
 }
 
-body {
+.page-content {
+  height: 100%;
+  overflow-y: auto;
   left: 0;
   -webkit-transition: left 0.5s ease;
   -moz-transition: left 0.5s ease;
@@ -1939,7 +1959,7 @@ body {
   color: white;
   font-size: 18px;
   height: 100vh;
-  right: -17.2rem;
+  right: 0;
   position: fixed;
   top: 0;
   width: 275px;
@@ -1991,14 +2011,6 @@ body {
   width: 100%;
 }
 
-.nav.expanded {
-  right: 0;
-  position: fixed;
-  overflow: auto;
-  left: auto;
-  z-index: 10;
-}
-
 .side-icon {
   display: flex;
   flex-direction: column;
@@ -2030,13 +2042,14 @@ body {
   z-index: 30;
   content: "";
   opacity: 0;
-  transition: opacity 0.1s, width 0s, height 0s;
+  transition: opacity 0.1s, width 0s, height 0s, right 0.5s ease;
 }
 
 #blocker.expanded:after {
   height: 100vh;
   width: 100vw;
   opacity: 1;
+  right: 275px;
 }
 
 .cookie-container {
@@ -2230,7 +2243,7 @@ body {
     margin: auto;
   }
 
-  header {
+  header, .shy-container {
     height: 110px;
   }
 
@@ -2325,7 +2338,7 @@ body {
     width: 970px;
   }
 
-  header {
+  header, .shy-container {
     height: 205px;
   }
 
@@ -2385,12 +2398,12 @@ body {
     width: 100%;
   }
 
-  .nav {
-    right: -22rem;
+  .page-content.expanded {
+    left: -350px;
   }
 
-  body.expanded {
-    left: -350px;
+  #blocker.expanded:after {
+    right: 350px;
   }
 
   .banner-img {
