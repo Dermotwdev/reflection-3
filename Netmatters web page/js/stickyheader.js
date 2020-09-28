@@ -188,7 +188,6 @@ var headerHTML = `<header class="scroll-header slide-down sticky">
     </div>
 </nav>
 </header>` ;
-
 // Initial state
 var scrollPos = 0;
 // adding scroll event
@@ -205,9 +204,8 @@ window.addEventListener('scroll', function() {
 
     if ($('.scrollheader')) {
       $('.scrollheader').remove();
-      // saves the new position for iteration.
-      scrollPos = (document.body.getBoundingClientRect()).top;
-
     }
-  }
+    // saves the new position for iteration.
+  scrollPos = (document.body.getBoundingClientRect()).top;
+  }     
 });

@@ -102,13 +102,13 @@
 
   // Body transitions 
 
-.page-content.expanded {
+#page-content.expanded {
     left: -275px; 
     position: relative;
     z-index: 9;
     height: 100%;
 }
-.page-content {
+#page-content {
   height: 100%;
   overflow-y: auto;
   left: 0;
@@ -230,4 +230,7 @@
   width: 100vw;
   opacity: 1;
   right: 275px
+}
+#page-content.expanded header {
+right: 275px;
 }

@@ -5,7 +5,7 @@ let hamburger = {
 		navToggle: document.querySelector('.nav-toggle'),
 		blocker: document.querySelector('#blocker'),
     contact: document.querySelector('.contact'),
-    page: document.querySelector('.page-content'),
+    page: document.querySelector('#page-content'),
 
 		initialize() {
       this.navToggle.addEventListener('click', () => { this.toggle(); });

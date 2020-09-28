@@ -659,8 +659,6 @@ header {
   width: 100%;
   background-color: white;
   height: 169px;
-  position: static;
-  transition: position 1s ease 1s;
 }
 
 .header-top-container {
@@ -799,6 +797,36 @@ a.main-nav h4 {
   display: flex;
 }
 
+.shy-header {
+  width: 100%;
+  position: static;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: right 0.5s ease, transform 0.5s ease;
+  transition: right 0.5s ease, transform 0.5s ease;
+  transform: translate3d(0, 0, 0);
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+}
+
+.is-watching {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.shy-container {
+  height: 169px;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+}
+.sticky-header .header-top-container {
+  width: 100%;
+  padding-right: 16.75px;
+}
+
 /* ----- body layout -----*/
 body {
   overflow-x: hidden;
@@ -809,7 +837,7 @@ body, html {
   height: 100%;
 }
 
-.page-content {
+#page-content {
   overflow-x: hidden;
   position: relative;
   z-index: 15;
@@ -1931,14 +1959,14 @@ input {
   flex-direction: column;
 }
 
-.page-content.expanded {
+#page-content.expanded {
   left: -275px;
   position: relative;
   z-index: 9;
   height: 100%;
 }
 
-.page-content {
+#page-content {
   height: 100%;
   overflow-y: auto;
   left: 0;
@@ -2049,6 +2077,10 @@ input {
   height: 100vh;
   width: 100vw;
   opacity: 1;
+  right: 275px;
+}
+
+#page-content.expanded header {
   right: 275px;
 }
 
@@ -2340,6 +2372,10 @@ input {
 
   header, .shy-container {
     height: 205px;
+  }
+
+  .header-top-container {
+    width: 100%;
   }
 
   .header-row {
