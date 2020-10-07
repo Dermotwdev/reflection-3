@@ -7,6 +7,8 @@ header {
     height: 169px; 
     //position: static;
     //transition: position 1s ease 1s;
+    top: 0;
+    right: 0;
 } 
 .header-top-container {
     width: 100%; 
@@ -134,24 +136,34 @@ li.main-nav {
     top: 0;
     right: 0;
     z-index: 1;
-    -webkit-transition: right 0.5s ease, transform 0.5s ease;
-    transition: right 0.5s ease, transform 0.5s ease;
-    transform: translate3d(0, 0, 0);
-    box-shadow: 0 5px 35px rgba(0,0,0,.1);
+    // -webkit-transition: right 0.5s ease, transform 0.5s ease;
+    // transition: right 0.5s ease, transform 0.5s ease;
+    // transform: translate3d(0, 0, 0);
   }
-  .is-watching {
-    -webkit-transform: translate3d(0,-100%,0);
-    transform: translate3d(0,-100%,0);
-  }
+//   .is-watching {
+//     -webkit-transform: translate3d(0,-100%,0);
+//     transform: translate3d(0,-100%,0);
+//   }
 
   .shy-container {
     height: 169px;
   }
 .sticky-header {
-  position: fixed;
+    display: none;
+    position: fixed;
     top: 0;
+    box-shadow: 0 5px 35px rgba(0,0,0,.1);
+    -webkit-transition: right 0.5s ease;
+    -moz-transition: right 0.5s ease;
+    -ms-transition: right 0.5s ease;
+    -o-transition: right 0.5s ease;
+    transition: right 0.5s ease;
     .header-top-container {
         width: 100%;
         padding-right: 16.75px;
     }
+}
+/* Animation properties */
+.animate__animated.animate__slideInDown {
+   --animate-duration: 0.25s; 
 }

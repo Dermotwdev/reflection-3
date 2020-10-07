@@ -659,6 +659,8 @@ header {
   width: 100%;
   background-color: white;
   height: 169px;
+  top: 0;
+  right: 0;
 }
 
 .header-top-container {
@@ -803,15 +805,6 @@ a.main-nav h4 {
   top: 0;
   right: 0;
   z-index: 1;
-  -webkit-transition: right 0.5s ease, transform 0.5s ease;
-  transition: right 0.5s ease, transform 0.5s ease;
-  transform: translate3d(0, 0, 0);
-  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
-}
-
-.is-watching {
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
 }
 
 .shy-container {
@@ -819,12 +812,24 @@ a.main-nav h4 {
 }
 
 .sticky-header {
+  display: none;
   position: fixed;
   top: 0;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  -webkit-transition: right 0.5s ease;
+  -moz-transition: right 0.5s ease;
+  -ms-transition: right 0.5s ease;
+  -o-transition: right 0.5s ease;
+  transition: right 0.5s ease;
 }
 .sticky-header .header-top-container {
   width: 100%;
   padding-right: 16.75px;
+}
+
+/* Animation properties */
+.animate__animated.animate__slideInDown {
+  --animate-duration: 0.25s;
 }
 
 /* ----- body layout -----*/
@@ -1880,7 +1885,6 @@ input {
   user-select: none;
   cursor: pointer;
   position: relative;
-  z-index: 11;
 }
 
 .nav-toggle-bar {
@@ -2434,7 +2438,7 @@ input {
     width: 100%;
   }
 
-  .page-content.expanded {
+  #page-content.expanded {
     left: -350px;
   }
 

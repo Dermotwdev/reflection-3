@@ -28,7 +28,7 @@
         var SCROLL = 0;
         var OLD_OFFSET = 0;
         var CURRENT_OFFSET = 0;
-        var DELTA = 5;
+        var DELTA = 3;
         var HEADER_HEIGHT = 0;
         var BODY = "";
         var page = document.getElementById('page-content');
@@ -55,18 +55,19 @@
 
         base.checkScrollPosition = function(){
             // if container exists to stop header disappearing 
-            if( base.options.offsetContentFlag ){
+            //if( base.options.offsetContentFlag ){
                 // Remove overlaying header when reaching the top of the page
                 if (page.scrollTop === 0 && document.getElementsByClassName('sticky-header').length !== 0) {
-                    document.getElementById('page-content').removeChild(document.querySelector('header:last-child'));
+                    //document.getElementById('page-content').removeChild(document.querySelector('header:last-child'));
+                    document.getElementsByClassName('sticky-header')[0].style.display = "none";
                     }
                     // If scroll position is beneath the header, call function
               if( SCROLL >= HEADER_HEIGHT ){
                 base.watch();
               }
-            }else{
-                base.watch();
-            }
+            //  else{
+            //     base.watch();
+            // }
         };
 
         base.watch = function(){
@@ -81,7 +82,6 @@
             CURRENT_OFFSET = SCROLL;
 
             if( Math.abs(OLD_OFFSET - CURRENT_OFFSET) <= DELTA ){
-                console.log('returned');
                 return;
             }
             // scrolling down
@@ -89,7 +89,9 @@
                 //console.log('scroll down');
                 //base.$el.addClass(base.options.classname);
                 if (document.getElementsByClassName('sticky-header').length !== 0) {
-                    document.getElementById('page-content').removeChild(document.querySelector('header:last-child'));
+                    //document.getElementById('page-content').removeChild(document.querySelector('header:last-child'));
+                    $('.sticky-header').addClass('animate__slideOutUp');
+                    //document.getElementsByClassName('sticky-header')[0].style.display = "none";
                 }
                 // if (page.scrollTop > 169) {
                 //     document.getElementsByClassName('shy-header')[0].style.position = 'fixed';
@@ -100,21 +102,21 @@
                 < OLD_OFFSET) {
                     //console.log('scroll up');
                    // base.$el.removeClass(base.options.classname);
-                   if (document.getElementsByClassName('sticky-header').length === 0) {
-                    let stickyHeader = document.createElement('header');
-                    stickyHeader.innerHTML = headerHTML;
-                    stickyHeader.classList.add('sticky-header');
-                    document.getElementById('page-content').appendChild(stickyHeader);
-                    console.log(`${page.scrollTop}`);
-                    console.log(`${CURRENT_OFFSET} is < ${OLD_OFFSET}`)
-                   }
+                //    if (document.getElementsByClassName('sticky-header').length === 0) {
+                //     let stickyHeader = document.createElement('header');
+                //     // stickyHeader.innerHTML = headerHTML;
+                //     // stickyHeader.classList.add('sticky-header');
+                //     // document.getElementById('page-content').appendChild(stickyHeader);
+                //    }
+                    console.log(`Current offset: ${CURRENT_OFFSET}, old Offset: ${OLD_OFFSET}`);
+                   $('.sticky-header').removeClass('animate__slideOutUp');
+                   document.getElementsByClassName('sticky-header')[0].style.display = "block";
+                   //console.log(`${document.getElementById('page-content').scrollTop}`);
                 }
             }
 
             OLD_OFFSET = CURRENT_OFFSET;
         };
-
-
 
         base.initialize();
 
@@ -123,7 +125,7 @@
 
     $.shyheader.defaultOptions = {
         classname : "is-watching",
-        container : 'shy-container',
+        container : 'undefined',
         offsetContentFlag : false
     };
 
