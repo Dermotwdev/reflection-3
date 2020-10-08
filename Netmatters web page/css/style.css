@@ -821,10 +821,11 @@ a.main-nav h4 {
   -ms-transition: right 0.5s ease;
   -o-transition: right 0.5s ease;
   transition: right 0.5s ease;
+  margin-right: 17px;
+  padding-left: 17px;
 }
 .sticky-header .header-top-container {
   width: 100%;
-  padding-right: 16.75px;
 }
 
 /* Animation properties */
@@ -2088,6 +2089,10 @@ input {
   right: 275px;
 }
 
+.hide-sidebar {
+  display: none;
+}
+
 .cookie-container {
   display: none;
   position: fixed;
@@ -2307,6 +2312,9 @@ input {
     margin: 0 auto;
     max-width: 100%;
   }
+  .card-container .software, .card-container .it, .card-container .marketing {
+    width: 721px;
+  }
   .card-container .telecoms, .card-container .design, .card-container .security, .card-container .training {
     width: 345px;
   }
@@ -2387,7 +2395,7 @@ input {
     margin-bottom: 10px;
   }
   .header-row a {
-    margin: 0px 20px auto 0;
+    margin: 0px 19px auto 0;
   }
 
   .logo {
@@ -2443,6 +2451,10 @@ input {
   }
 
   #blocker.expanded:after {
+    right: 350px;
+  }
+
+  #page-content.expanded header {
     right: 350px;
   }
 
@@ -2589,10 +2601,10 @@ input {
     width: 1200px;
   }
   .card-container .software, .card-container .it, .card-container .marketing {
-    width: 368px;
+    width: 370px;
   }
   .card-container .telecoms, .card-container .design, .card-container .security, .card-container .training {
-    width: 268px;
+    width: 270px;
   }
   .card-container .telecoms p, .card-container .design p, .card-container .security p, .card-container .training p {
     height: 106.8px;
