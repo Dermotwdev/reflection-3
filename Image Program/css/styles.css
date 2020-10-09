@@ -58,3 +58,17 @@ ul li {
     display: flex;
     align-items: center;
 }
+
+#load, #change-email {
+    display: none;
+}
+#link {
+    display: none;
+    background-color: springgreen;
+}
+.utility-btns {
+    display: flex;
+}
+.utility-btns button {
+    margin: 10px 20px;
+}
